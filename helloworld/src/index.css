@@ -18,9 +18,17 @@ body {
 }
 
 ol, ul {
-  padding-left: 30px;
-}
+  padding-left: 20px;
+  list-style-type: none;
 
+}
+button {
+  height:30px;
+  width:150px;
+}
+.game-board {
+  margin-top:55px;
+}
 .board-row:after {
   clear: both;
   content: "";
@@ -28,7 +36,23 @@ ol, ul {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  margin-left:-438px
+}
+
+.blink {
+  animation: blinker 1s step-start infinite;
+  margin-left:-400px;
+  font-size: 30px;
+  font-weight: bolder;
+  color:green;
+
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .square {
