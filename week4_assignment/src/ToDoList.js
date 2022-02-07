@@ -11,7 +11,7 @@ class ToDoList extends React.Component {
     this.state = {
         isCompleted: false, 
         items: [],
-        itemName: 'asdasdas'
+        itemName: 'No name given to task'
         
       };
     }
@@ -35,21 +35,26 @@ class ToDoList extends React.Component {
     
       render() {
         return (
-          <div className="">
+          <div className="paddingdiv">
+            
               <div className="inputbox">
+                <div className="inputboxinner">
               <h1>Add an Item</h1>
             <input
               type="text"
               onChange={this.saveName}
+              placeholder="Enter task here"
             />
-            <button onClick={this.addNewItem}> Add Item </button>
+            <button className="addBtn" onClick={this.addNewItem}> Add Item </button>
             </div>
+            </ div>
             <ol className="container">
               {this.state.items.map((subItems, sIndex) => {
-                return <li class='box' key={sIndex}> <ItemForm itemName={this.state.itemName}/></li>
+                return <li class='box' key={sIndex}> <ItemForm itemName={this.state.itemName} checked="checked"/></li>
               })}
             </ol>
           </div>
+
         );
       }
   

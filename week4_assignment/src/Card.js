@@ -1,5 +1,5 @@
 import React from "react";
-
+import './card.css'
 
 function Card(props) {
   
@@ -7,14 +7,15 @@ function Card(props) {
       <div>
         {/* <form onSubmit={this.handleSubmit}> */}
           <h1>
-            Item: {props.itemName}
+            {props.itemName}
           </h1>
 
-          <h1>
+          <h2>
               Mark as completed:
-              <input name="isCompleted" type="checkbox"  checked={props.isCompleted} />
+              <input className="bigcheckbox" type="checkbox"  checked={props.isCompleted} />
+              <span className="checkmark"></span>
               {/* onChange={props.this.handleChange} /> */}
-          </h1>
+          </h2>
           {/* <input type="submit" value="Submit" /> */}
         {/* </form> */}
         </div>
