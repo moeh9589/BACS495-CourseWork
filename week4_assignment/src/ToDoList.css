@@ -1,3 +1,33 @@
 .ToDoList {
     padding: 100px;
 }
+
+.container {
+    padding-top:200px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+
+.box {
+    flex: 1 1 0;
+    min-width:400px;
+    max-width: 400px;
+    height:200px;
+    background-color: rgb(122, 122, 129);
+    margin: 3em;
+    padding-left:10px;
+    text-align: left;
+}
+
+.inputbox {
+    padding-top:150px;
+    padding-left: 2.7em;
+    justify-content: left;
+    position: fixed;
+}
+
+
+
